@@ -2,11 +2,11 @@
 
 This project is all about basics of JsonPowerDB (JPDB) and how to use JPDB for CRUD operations
 
-About JsonPowerDB:
+## About JsonPowerDB:
 
 JsonPowerDB is a Real-time, High Performance, Lightweight and Simple to Use, Rest API based Multi-mode DBMS. JsonPowerDB has ready to use API for Json document DB, RDBMS, Key-value DB, GeoSpatial DB and Time Series DB functionality. JPDB supports and advocates for true serverless and pluggable API development.
 
-Benefits of using JsonPowerDB
+## Benefits of using JsonPowerDB
 
 Simplest way to retrieve data in a JSON format.
 Schema-free, Simple to use, Nimble and In-Memory database.
@@ -14,30 +14,33 @@ It is built on top of one of the fastest and real-time data indexing engine - Po
 It is low level (raw) form of data and is also human readable.
 It helps developers in faster coding, in-turn reduces development cost.
 
-Some Features of JsonPowerDB
+## Some Features of JsonPowerDB
 
-Nimble, Simple to use, In Memory, Real-Time
-Schema free - easy to maintain
-Serverless Support - fast development - cuts time to market
-Multi-Mode database - one solution to variety of data
-Build around worlds fastest* indexing engine PowerIndex
-Webservices API - low development cost
-A single instance - Million Indexes
-Inbuilt support to Querying Multiple Databases
-Multiple security layers
-Server Side Native NoSQL - best performance
+- Nimble, Simple to use, In Memory, Real-Time
+- Schema free - easy to maintain
+- Serverless Support - fast development - cuts time to market
+- Multi-Mode database - one solution to variety of data
+- Build around worlds fastest* indexing engine PowerIndex
+- Webservices API - low development cost
+- A single instance - Million Indexes
+- Inbuilt support to Querying Multiple Databases
+- Multiple security layers
+- Server Side Native NoSQL - best performance
 
 
-Competitive Landscape
+## Competitive Landscape
 ![image](https://user-images.githubusercontent.com/107788182/175831765-b1865015-066b-44a7-9878-6fd244300a6e.png)
 
-DEMO
-Update Single Record
-Some important points to keep in mind
-Http Method : POST
-Base URL : http://api.login2explore.com:5577
-End-point URL : /api/iml
-Syntax:
+### DEMO
+#### Update Single Record
+* Some important points to keep in mind
+* Http Method : POST
+* Base URL : http://api.login2explore.com:5577
+* End-point URL : /api/iml
+
+#### Syntax:
+
+```
 {
  	"token": <"connection-token">,
  	"cmd": "UPDATE",
@@ -48,16 +51,49 @@ Syntax:
  			<"ColumnName": "NewJsonValue">|<"New-ColumnName": "New-Column-Value">
  		}
  	}
- }
+ } 
+ ```
  
- Code Sample:
+#### Code Sample:
  
-{
+ ```
+ {
     "token": "90939350|-31949287484890435|90939562",
     "cmd": "UPDATE",
     "dbName": "Employee",
     "rel": "Emp-Rel",
     "jsonStr":{
       "4":{"mobile no" : "9876451273"}
-    }
+ 
+ }
 }
+```
+##### DEMO
+![image](https://user-images.githubusercontent.com/107788182/175832579-9bf3b83f-e0a0-4685-812d-9a9062e88a64.png)
+
+#### Remove Single Record
+* Some important points to keep in mind
+* Http Method : POST
+* Base URL : http://api.login2explore.com:5577
+* End-point URL : /api/iml
+
+#### Syntax:
+```
+{
+ 	"token": <"connection-token">,
+ 	"cmd": "REMOVE",
+ 	"dbName": <"database-name">,
+ 	"rel": <"relation-name">,
+ 	"record": <record_number | [recNo1, recNo2....]>
+ }
+```
+#### Code Sample
+   
+  ![image](https://user-images.githubusercontent.com/107788182/175832726-d452bb52-a118-4b90-b496-3500b573386b.png)
+  
+ #### DEMO
+  ![image](https://user-images.githubusercontent.com/107788182/175832940-93563195-c4c6-41c3-a15c-27080a586e41.png)
+  
+  
+
+
